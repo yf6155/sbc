@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WebSocket Test Demo</title>
+    <style>
+        HTML, BODY, FORM {
+            width: 98%;
+            height: 100%;
+        }
+    </style>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<h4>登录WebSocket</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">登录用户Id</td>
+        <td align="left" width="60%"><input id="userid" type="text" style="width: 99.5%"/></td>
+        <td align="left" width="20%">
+            <button onclick="login()">登录</button>
+        </td>
+    </tr>
+</table>
+
+<h4>发送公告</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%" height="99.5%">接受用户ID<br>（多人以英文都好分割）</td>
+        <td align="left" width="60%"><input id="accIdList" type="text" style="width: 99.5%"/></td>
+    </tr>
+    <tr>
+        <td align="right" width="15%">消息内容</td>
+        <td align="left" width="60%"><input id="adviceContent" type="text" style="width: 99.5%;"/></td>
+        <td align="left" width="20%">
+            <button onclick="advice()">发送通知</button>
+        </td>
+    </tr>
+</table>
+
+<h4>群发消息</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">消息内容</td>
+        <td align="left" width="60%"><input id="msg" type="text" style="width: 99.5%"/></td>
+        <td align="left" width="20%">
+            <button onclick="groupchat()">群聊</button>
+        </td>
+    </tr>
+</table>
+
+<h4>私聊</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">接收用户ID</td>
+        <td align="left" width="60%"><input id="accId" type="text" style="width: 99.5%"/></td>
+    </tr>
+    <tr>
+        <td align="right" width="15%">消息内容</td>
+        <td align="left" width="60%"><input id="content" type="text" style="width: 99.5%;"/></td>
+        <td align="left" width="20%">
+            <button onclick="singlechat()">私聊</button>
+        </td>
+    </tr>
+</table>
+
+<h4>下线</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">关闭</td>
+        <td align="left">
+            <button onclick="closeWs()">关闭</button>
+        </td>
+    </tr>
+
+</table>
+
+<h4>传输图片</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">接受图片用户ID</td>
+        <td align="left" width="60%"><input id="accPicId" type="text" style="width: 99.5%"/></td>
+    </tr>
+    <tr>
+        <td><input id="file" type="file" width="99.5%"/></td>
+        <td>
+            <button onclick="send()">发送</button>
+        </td>
+
+    </tr>
+</table>
+
+
+<h4>通知公告内容</h4>
+<table style="width: 98%" border="1">
+    <div id="advice" datatype="text">
+    </div>
+</table>
+
+<h4>聊天内容</h4>
+<table style="width: 98%" border="1">
+    <div id="append" datatype="text">
+    </div>
+</table>
+
+<h4>图片内容</h4>
+<table style="width: 98%" border="1">
+    <div>
+        <img id="image" src=""/>
+    </div>
+</table>
+
+</body>
+
+<script type="text/javascript">
+
+    var ws = null;
+    var userId = null;
+
+    /**
+     *登录，将UserId存入到httpSession中
+     */
+    function login() {
+        if ("WebSocket" in window) {
+
+            userId = document.getElementById("userid").value;
+
+            if (userId != null && userId != undefined) {
+
+                $.ajax({
+                    url: 'http://localhost:8080/chat/addUser',
+                    data: {
+                        userId: userId
+                    },
+                    success: function () {
+                        if (ws == null || ws == undefined) {
+                            conn();
+                        }
+                    }
+                });
+
+            } else {
+                alert("请先录入用户Id");
+                return false;
+            }
+
+        } else {
+            alert("此浏览器不支持websocket");
+            return false;
+        }
+    }
+
+    /**
+     * 创建Websocket连接
+     */
+    function conn() {
+        ws = new WebSocket("ws://localhost:8080/chat/superBarChat");
+        ws.onmessage = function (event) {
+            appendMsg(event)
+        }
+        ws.onclose = function (ev) {
+            alert("websocket has been closed");
+        }
+        ws.error = function (ev) {
+            alert("websocket happends error");
+        }
+    }
+
+    /**
+     *通知公告
+     */
+    function advice() {
+        var content = document.getElementById("adviceContent").value;
+
+        var accId = document.getElementById("accIdList").value;
+
+        var adviceSendType = "2";
+
+        if (accId == null || accId == undefined || accId == "") {
+            adviceSendType = "1";
+            accId = "";
+        }
+
+        if (userId == null || userId == undefined) {
+            alert("请先登录");
+            return false;
+        }
+
+        if (content == null || content == undefined) {
+            alert("请录入公告内容");
+            return false;
+        }
+
+        //系统公告
+        var dto = {
+            fromUserId: userId,
+            adviceType: "1",
+            adviceSendType: adviceSendType,
+            acceptUserIdStr: accId,
+            adviceContent: content,
+            relationId: ""
+        };
+
+        var adviceInfo = JSON.stringify(dto);
+
+        $.ajax({
+            url: 'http://localhost:8080/chat/addAdvice',
+            dataType: "json",
+            contentType: "application/json",
+            type: "post",
+            data: adviceInfo,
+            success: function (e) {
+                if(e.resCode == 0){
+                    alert("addAdvice success.")
+                }else{
+                    alert("返回码："+e.resCode+" , The resMessage is "+e.resMessage);
+                }
+            }
+        });
+
+    }
+
+    /**
+     * 群聊
+     */
+    function groupchat() {
+
+        var msg = document.getElementById("msg").value;
+
+        var dto = {
+            messageType: "chatotm",
+            fromUserId: userId,
+            toUserId: "",
+            payload: msg
+        };
+
+        var sendInfo = JSON.stringify(dto);
+
+        alert("发送消息：" + sendInfo)
+
+        if (ws != null) {
+
+            //校验消息体录入
+            if (msg != null && msg != undefined) {
+
+                ws.send(sendInfo);
+
+            } else {
+                alert("消息内容为空");
+                return false;
+            }
+        } else {
+            alert("请先链接ws")
+            return false;
+        }
+    }
+
+    /**
+     *私聊
+     */
+    function singlechat() {
+        var content = document.getElementById("content").value;
+
+        var accId = document.getElementById("accId").value;
+
+        if (accId == null || accId == undefined) {
+            alert("请输入消息接收方Id");
+            return false;
+        }
+
+        if (userId == null || userId == undefined) {
+            alert("请先登录");
+            return false;
+        }
+
+        if (content == null || content == undefined) {
+            alert("请录入聊天内容");
+            return false;
+        }
+
+        var dto = {
+            messageType: "chatoto",
+            fromUserId: userId,
+            toUserId: accId,
+            payload: content
+        };
+
+        var sendInfo = JSON.stringify(dto);
+
+        alert("发送消息：" + sendInfo)
+
+        if (ws != null) {
+
+            //校验消息体录入
+            if (sendInfo != null && sendInfo != undefined) {
+
+                ws.send(sendInfo);
+
+            } else {
+                alert("消息内容为空");
+                return false;
+            }
+        } else {
+            alert("请先链接ws")
+            return false;
+        }
+    }
+
+    /**
+     * 断开连接
+     */
+    function closeWs() {
+        alert(ws.readyState);
+        if (ws.readyState == 1) {
+            ws.close();
+        }
+    }
+
+    /**
+     * 传送图片
+     */
+    function send() {
+        var inputElement = document.getElementById("file");
+        var file = inputElement.files[0];
+
+        var accPicId = document.getElementById("accPicId").value;
+
+        if (accPicId == null || accPicId == undefined) {
+            alert("请输入图片接收方Id");
+            return false;
+        }
+
+        if (userId == null || userId == undefined) {
+            alert("请先登录");
+            return false;
+        }
+
+        //发送文件名
+        //ws.send(file.name);
+
+
+        //读取文件　　
+        var reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        //reader.readAsArrayBuffer(file);
+
+        //文件读取完毕后该函数响应
+        reader.onload = function (evt) {
+            var result = evt.target.result;
+
+            // 显示照片
+            //document.getElementById('image').src = evt.target.result;
+
+            //传输消息对象
+            var dto = {
+                messageType: "chatoto",
+                fromUserId: userId,
+                toUserId: accPicId,
+                payload: result
+            };
+
+            var sendInfo = JSON.stringify(dto);
+
+
+            alert("发送消息长度：" + sendInfo.length);
+            alert("发送消息：" + sendInfo);
+
+            ws.send(sendInfo);
+        }
+
+    }
+
+
+    /**
+     * 聊天消息
+     */
+    function appendMsg(event) {
+        var response = JSON.parse(event.data);
+
+        var resType = response.resType;
+        var payload = response.payload;
+
+        if (resType == "2") {
+            //聊天消息
+            if (payload.indexOf("base64") >= 0) {
+                document.getElementById('image').src = payload;
+            } else {
+                var appendDiv = document.getElementById("append");
+                appendDiv.innerHTML = appendDiv.innerText + payload + '<br/>';
+            }
+        } else {
+            //通知消息
+            var appendDiv = document.getElementById("advice");
+            appendDiv.innerHTML = appendDiv.innerText + payload + '<br/>';
+        }
+
+    }
+
+</script>
+
+</html>
