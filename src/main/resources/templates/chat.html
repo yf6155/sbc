@@ -65,6 +65,30 @@
     </tr>
 </table>
 
+
+<h4>获取当前用户的所有聊天用户列表</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">查询</td>
+        <td align="left">
+            <button onclick="getChatUserList()">查询</button>
+        </td>
+    </tr>
+</table>
+<h4>查询聊天记录</h4>
+<table style="width: 98%" border="1">
+    <tr>
+        <td align="right" width="15%">全量查询</td>
+        <td align="left">
+            <button onclick="getMsg()">查询</button>
+        </td>
+        <td align="right" width="15%">分页查询</td>
+        <td align="left">
+            <button onclick="getMsgByPage()">查询</button>
+        </td>
+    </tr>
+</table>
+
 <h4>下线</h4>
 <table style="width: 98%" border="1">
     <tr>
@@ -73,7 +97,6 @@
             <button onclick="closeWs()">关闭</button>
         </td>
     </tr>
-
 </table>
 
 <h4>传输图片</h4>
@@ -211,10 +234,10 @@
             type: "post",
             data: adviceInfo,
             success: function (e) {
-                if(e.resCode == 0){
+                if (e.resCode == 0) {
                     alert("addAdvice success.")
-                }else{
-                    alert("返回码："+e.resCode+" , The resMessage is "+e.resMessage);
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
                 }
             }
         });
@@ -318,6 +341,77 @@
     }
 
     /**
+     * 获取聊天用户列表
+     */
+    function getChatUserList() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getChatUserList',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("列表长度：" + e.resObject.length)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+    /**
+     * 全量查询
+     */
+    function getMsg() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getMsg',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId,
+                chatUserId: "2"
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("列表长度：" + e.resObject.length)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+    /**
+     * 分页查询
+     */
+    function getMsgByPage() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getMsgByPage',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId,
+                chatUserId: "2",
+                pageNo: "2",
+                pageSize: "5"
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("列表长度：" + e.resObject.length)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+
+    /**
      * 传送图片
      */
     function send() {
@@ -363,14 +457,9 @@
             };
 
             var sendInfo = JSON.stringify(dto);
-
-
-            alert("发送消息长度：" + sendInfo.length);
             alert("发送消息：" + sendInfo);
-
             ws.send(sendInfo);
         }
-
     }
 
 
@@ -398,7 +487,6 @@
         }
 
     }
-
 </script>
 
 </html>

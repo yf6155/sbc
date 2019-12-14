@@ -66,7 +66,14 @@ public class AdviceServiceImpl implements IAdviceService {
             //ADVICE_SEND_TYPE_ALL全员通知
 
             //获取有效的用户列表
-            ArrayList<User> userArrayList = userDao.getAllUserList(Integer.valueOf(Constant.USER_DELETED_NORMAL));
+            ArrayList<User> userArrayList;
+            try {
+                userArrayList = userDao.getAllUserList(Integer.valueOf(Constant.USER_DELETED_NORMAL));
+            } catch (Exception e) {
+                log.error("execute getAllUserList happends exception,the advice is " + advice.toString());
+                resCode = 2;
+                throw new SuperBarException("There are no normal user list,the advice is " + advice.toString(), null);
+            }
 
             if (userArrayList.size() <= 0) {
                 log.error("There are no normal user list,the advice is " + advice.toString());

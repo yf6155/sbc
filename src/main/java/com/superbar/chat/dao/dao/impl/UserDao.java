@@ -57,4 +57,16 @@ public class UserDao implements IDao<User> {
         }
         return result;
     }
+
+    public ArrayList<User> queryChatUserList(Integer userId) {
+        ArrayList<User> result = new ArrayList<User>();
+        try {
+            result = iUserMapper.queryChatUserList(userId);
+        } catch (Exception e) {
+            log.error("The UserDao execute queryChatUserList method happends exception.", e);
+            result = new ArrayList<User>();
+            throw new DataBaseException("The UserDao execute queryChatUserList method happends exception.", e);
+        }
+        return result;
+    }
 }

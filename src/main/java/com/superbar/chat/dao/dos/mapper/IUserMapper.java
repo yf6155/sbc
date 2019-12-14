@@ -21,4 +21,14 @@ public interface IUserMapper {
     @ResultType(User.class)
     public ArrayList<User> selectAllUserList(Integer deleted);
 
+    /**
+     * 查询当前用户的所有聊天用户列表
+     *
+     * @param userId
+     * @return
+     */
+    @SelectProvider(type = UserProvider.class, method = "queryChatUserList")
+    @ResultType(User.class)
+    public ArrayList<User> queryChatUserList(Integer userId);
+
 }

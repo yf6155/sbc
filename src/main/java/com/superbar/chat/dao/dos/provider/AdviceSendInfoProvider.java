@@ -17,13 +17,11 @@ public class AdviceSendInfoProvider {
 
     public String selectAdviceSendInfoList(Integer toUserId, String status) {
         StringBuffer sb = new StringBuffer();
-
         sb.append("SELECT a.adviceid adviceId, a.fromuserid fromUserId,b.touserid toUserId, a.advicetype adviceType, a.advicesendtype adviceSendType,");
         sb.append("a.advicecontent adviceContent, a.relationid relationId, a.created_date createdDate, a.updated_date updatedDate,b.ctimestamp cTimeStamp,");
         sb.append("b.lastutimestamp lastUTimeStamp from t_advice a,t_advicestatus b WHERE a.adviceid = b.adviceid AND b.touserid = #{toUserId} ");
         sb.append("AND b.status = #{status}");
         sb.append(" ORDER BY b.ctimestamp");
-
         return sb.toString();
     }
 

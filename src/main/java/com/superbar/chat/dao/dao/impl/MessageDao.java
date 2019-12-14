@@ -42,7 +42,7 @@ public class MessageDao implements IDao<MessageEntity> {
             } catch (Exception e) {
                 log.error("The MessageDao execute insertMessageEntity method happends exception.", e);
                 result = 0;
-                throw new DataBaseException("The MessageDao execute insertMessageEntity method happends exception.",e);
+                throw new DataBaseException("The MessageDao execute insertMessageEntity method happends exception.", e);
             }
         }
         return result;
@@ -58,7 +58,7 @@ public class MessageDao implements IDao<MessageEntity> {
             } catch (Exception e) {
                 log.error("The MessageDao execute selectByKey method happends exception.", e);
                 rtnMessageEntity = new MessageEntity();
-                throw new DataBaseException("The MessageDao execute selectByKey method happends exception.",e);
+                throw new DataBaseException("The MessageDao execute selectByKey method happends exception.", e);
             }
             return rtnMessageEntity;
         } else {
@@ -81,7 +81,7 @@ public class MessageDao implements IDao<MessageEntity> {
             } catch (Exception e) {
                 log.error("The MessageDao execute selectMessageEntityList method happends exception.", e);
                 result = new ArrayList<MessageEntity>();
-                throw new DataBaseException("The MessageDao execute selectMessageEntityList method happends exception.",e);
+                throw new DataBaseException("The MessageDao execute selectMessageEntityList method happends exception.", e);
             }
             return result;
         } else {
@@ -108,9 +108,61 @@ public class MessageDao implements IDao<MessageEntity> {
             } catch (Exception e) {
                 log.error("The MessageDao execute updateMessageEntityStatusByKey method happends exception.", e);
                 result = 0;
-                throw new DataBaseException("The MessageDao execute updateMessageEntityStatusByKey method happends exception.",e);
+                throw new DataBaseException("The MessageDao execute updateMessageEntityStatusByKey method happends exception.", e);
             }
         }
         return result;
     }
+
+    /**
+     * 查询全量聊天记录
+     *
+     * @param userId     登录用户
+     * @param chatUserId 登录用户聊天用户
+     * @return
+     */
+    public ArrayList<MessageEntity> selectChatMsgList(Integer userId, Integer chatUserId) {
+        ArrayList<MessageEntity> result = new ArrayList<MessageEntity>();
+        try {
+            result = iMessageMapper.selectChatMsgList(userId, chatUserId);
+        } catch (Exception e) {
+            log.error("The MessageDao execute selectChatMsgList method happends exception.", e);
+            result = new ArrayList<MessageEntity>();
+            throw new DataBaseException("The MessageDao execute selectChatMsgList method happends exception.", e);
+        }
+        return result;
+    }
+
+    /**
+     * 翻页查询
+     *
+     * @param userId
+     * @param chatUserId
+     * @param pageNo     页码（从1开始）
+     * @param pageSize   分页容量
+     * @return
+     */
+    public ArrayList<MessageEntity> selectChatMsgListByPage(Integer userId, Integer chatUserId, Integer pageNo, Integer pageSize) {
+        ArrayList<MessageEntity> result = new ArrayList<MessageEntity>();
+        Integer offset = 0;
+        if (pageNo >= 1) {
+            pageNo = pageNo - 1;
+        } else {
+            pageNo = 0;
+        }
+
+        // 分页查询偏移量
+        offset = pageNo * pageSize;
+
+        try {
+            result = iMessageMapper.selectChatMsgListByPage(userId, chatUserId, offset, pageSize);
+        } catch (Exception e) {
+            log.error("The MessageDao execute selectChatMsgListByPage method happends exception.", e);
+            result = new ArrayList<MessageEntity>();
+            throw new DataBaseException("The MessageDao execute selectChatMsgListByPage method happends exception.", e);
+        }
+        return result;
+    }
+
+
 }

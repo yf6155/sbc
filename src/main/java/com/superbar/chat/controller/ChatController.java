@@ -1,5 +1,7 @@
 package com.superbar.chat.controller;
 
+import com.superbar.chat.dao.entity.User;
+import com.superbar.chat.service.inf.IUserService;
 import com.superbar.chat.websocket.dto.AdviceDataTransferObject;
 import com.superbar.chat.controller.eny.ControllerResponse;
 import com.superbar.chat.exception.SuperBarException;
@@ -8,12 +10,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 
 /**
  * <p>Application Name : ChatController </p>
@@ -33,6 +37,9 @@ public class ChatController {
     @Autowired(required = false)
     private IAdviceService iAdviceService;
 
+    @Autowired(required = false)
+    private IUserService iUserService;
+
     /**
      * 索引页
      *
@@ -41,21 +48,6 @@ public class ChatController {
     @RequestMapping("/index")
     public String index() {
         return "chat";
-    }
-
-    /**
-     * 新增用户信息
-     *
-     * @param session session
-     * @param userId  userId
-     */
-    @RequestMapping("/addUser")
-    @ResponseBody
-    public void addUser(HttpSession session, String userId) {
-
-        if (userId != null) {
-            session.setAttribute("userId", userId);
-        }
     }
 
     /**
@@ -84,4 +76,5 @@ public class ChatController {
         controllerResponse.setResCode(resCode);
         return controllerResponse;
     }
+
 }

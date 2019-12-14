@@ -55,4 +55,29 @@ public interface IMessageMapper {
     @UpdateProvider(type = MessageProvider.class, method = "updateMessageEntityByKey")
     public Integer updateMessageEntityByKey(MessageEntity messageEntity);
 
+
+    /**
+     * 返回全量数据
+     *
+     * @param userId     登录用户
+     * @param chatUserId 与登录用户聊天的用户
+     * @return
+     */
+    @SelectProvider(type = MessageProvider.class, method = "selectChatMsgList")
+    @ResultType(MessageEntity.class)
+    public ArrayList<MessageEntity> selectChatMsgList(Integer userId, Integer chatUserId);
+
+    /**
+     * 翻页查询
+     *
+     * @param userId     登录用户
+     * @param chatUserId 与登录用户聊天的用户
+     * @param offset     翻页查询偏移量
+     * @param pageSize   每页数量
+     * @return
+     */
+    @SelectProvider(type = MessageProvider.class, method = "selectChatMsgListByPage")
+    @ResultType(MessageEntity.class)
+    public ArrayList<MessageEntity> selectChatMsgListByPage(Integer userId, Integer chatUserId, Integer offset, Integer pageSize);
+
 }

@@ -84,10 +84,42 @@ public class MessageProvider {
      *
      * @return
      */
-
     public String updateMessageEntityByKey(MessageEntity msg) {
         StringBuffer sb = new StringBuffer();
 
+        return sb.toString();
+    }
+
+    /**
+     * 查询全量聊天消息
+     *
+     * @param userId
+     * @param chatUserId
+     * @return
+     */
+    public String selectChatMsgList(Integer userId, Integer chatUserId) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("select msgid, msgtype, contenttype, textmsg, fromuserid, touserid, ctimestamp, status, lastutimestamp from t_msg WHERE fromuserid = #{userId} AND touserid = #{chatUserId} AND STATUS <> '0' ");
+        sb.append(" UNION ");
+        sb.append("select msgid, msgtype, contenttype, textmsg, fromuserid, touserid, ctimestamp, status, lastutimestamp from t_msg WHERE fromuserid = #{chatUserId} AND touserid = #{userId} AND STATUS <> '0' ");
+        sb.append(" ORDER BY ctimestamp");
+        return sb.toString();
+    }
+
+    /**
+     * 翻页查询聊天消息
+     *
+     * @param userId
+     * @param chatUserId
+     * @return
+     */
+    public String selectChatMsgListByPage(Integer userId, Integer chatUserId, Integer offset, Integer pageSize) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("select msgid, msgtype, contenttype, textmsg, fromuserid, touserid, ctimestamp, status, lastutimestamp from t_msg WHERE fromuserid = #{userId} AND touserid = #{chatUserId} AND STATUS <> '0' ");
+        sb.append(" UNION ");
+        sb.append("select msgid, msgtype, contenttype, textmsg, fromuserid, touserid, ctimestamp, status, lastutimestamp from t_msg WHERE fromuserid = #{chatUserId} AND touserid = #{userId} AND STATUS <> '0' ");
+        sb.append(" ORDER BY ctimestamp");
+        sb.append(" LIMIT #{pageSize} OFFSET #{offset}");
         return sb.toString();
     }
 

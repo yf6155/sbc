@@ -1,6 +1,7 @@
 package com.superbar.chat.websocket.handler;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONException;
 import com.superbar.chat.websocket.dto.MessageDataTransferObject;
 import com.superbar.chat.websocket.enums.MessageTypeEnum;
 import com.superbar.chat.controller.eny.MessageResponse;
@@ -116,7 +117,12 @@ public class SuperBarChatHandler implements WebSocketHandler {
         MessageDataTransferObject dto = null;
 
         if (!StringUtils.isEmpty(dtoStr)) {
-            dto = JSON.parseObject(dtoStr, MessageDataTransferObject.class);
+            try {
+                dto = JSON.parseObject(dtoStr, MessageDataTransferObject.class);
+            } catch (JSONException e) {
+                log.error("The input JsonString is :{}", dtoStr);
+                return;
+            }
         }
 
         dto.setTimeStamp(new Date());
