@@ -39,7 +39,7 @@ WebSocket
 数据库：mysql</p>
 <p>数据库框架Mybatis</p></div></div><h1>2、SBC接口文档</h1><div style="margin-left:0px;"><h2>2.1、WS握手</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
-<li>页面中创建WebSocket链接</li>
+<li>用户登录后，可调用此接口创建WebSocket链接，使用户链接到WebSocket服务器。</li>
 </ul>
 <p><strong>请求URL：</strong> </p>
 <ul>
@@ -136,7 +136,7 @@ Socket.close()  关闭连接</code></pre></table>
 <li>更多返回错误代码请看首页的错误代码描述</li>
 </ul></div><h2>2.4、WS发送消息（群聊）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
-<li>Websocket群发聊天消息（当前Session不接受消息）</li>
+<li>Websocket群发聊天消息（预留功能）</li>
 </ul>
 <p><strong>请求：</strong> </p>
 <ul>
@@ -256,9 +256,10 @@ Socket.close()  关闭连接</code></pre></table>
 <ul>
 <li>消息类型枚举类：com.superbar.chat.config.enums.MessageTypeEnum</li>
 <li>单聊消息中toUserId是必传参数</li>
-</ul></div><h2>2.6、添加用户接口</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+</ul></div><h2>2.6、用户登录接口（Session级别）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
-<li>添加用户至Session接口</li>
+<li>添加用户至Session中，后续WebSocket创建链接时会从Session中获取用户userId信息。</li>
+<li>此Session是浏览器级别，浏览器关闭则session关闭。</li>
 </ul>
 <p><strong>请求URL：</strong> </p>
 <ul>
@@ -286,7 +287,37 @@ Socket.close()  关闭连接</code></pre></table>
 </tr>
 </tbody>
 </table>
-<p><strong>无返回</strong></p></div><h2>2.7、定时任务（离线消息推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<p><strong>无返回</strong></p></div><h2>2.7、获取登录用户的聊天列表</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取当前登录用的聊天列表，即该用户与哪些用户有过聊天动作。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getChatUserList?userId=用户Id</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>无返回</strong></p></div><h2>2.8、定时任务（离线消息推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
 <li>离线消息推送，在用户再次登录链接Websocket后，进行离线消息定时推送，当前频率是每5秒轮询一次</li>
 </ul>
@@ -297,7 +328,7 @@ Socket.close()  关闭连接</code></pre></table>
 <p><strong>实现代码位置</strong>
 com\superbar\chat\websocket\handler\SuperBarChatHandler.java中sendOfflineMsg方法</p>
 </li>
-</ul></div><h2>2.8、定时任务（通知公告推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+</ul></div><h2>2.9、定时任务（通知公告推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
 <li>通知公告推送，轮训当前已经登录的Websocket用户，进行用户的通知公告定时推送，当前频率是每5秒</li>
 </ul>
@@ -309,6 +340,99 @@ com\superbar\chat\websocket\handler\SuperBarChatHandler.java中sendOfflineMsg方
 com\superbar\chat\scheduler\AdvicePushScheduler.java中pushAdvicesTask方法</p>
 </li>
 <li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>2.10、消息列表获取（全量）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>查询用户与聊天用户的消息列表，所有消息列表，按照发送时间升序排列。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getMsg</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">chatUserId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>消息接收用户Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回</strong></p>
+<ul>
+<li>以数组方式返回聊天记录。</li>
+</ul></div><h2>2.11、消息列表获取（分页）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>查询用户与聊天用户的消息列表，按照页码和页容量查询返回，按照发送时间升序排列。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getMsgByPage</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">chatUserId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>消息接收用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageNo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageSize</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>页容量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+pageNo（页码）参数必须从1开始。
+pageSize（页容量）参数必须大于1.</p>
+<p><strong>返回</strong></p>
+<ul>
+<li>以数组方式返回聊天记录。</li>
 </ul></div></div><h1>3、SBC设计文档</h1><div style="margin-left:0px;"><h2>3.1、数据库设计</h2><div style="margin-left:0px;"><p>聊天消息表：
 CREATE TABLE <code>t_msg</code> (
 <code>msgid</code> INT(11) NOT NULL AUTO_INCREMENT COMMENT '消息主键',
