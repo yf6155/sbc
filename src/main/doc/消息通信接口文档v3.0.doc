@@ -263,11 +263,11 @@ Socket.close()  关闭连接</code></pre></table>
 </ul>
 <p><strong>请求URL：</strong> </p>
 <ul>
-<li><code>http://IP:端口/chat/addUser?userId=用户Id</code></li>
+<li><code>http://IP:端口/chat/addUser</code></li>
 </ul>
 <p><strong>请求方式：</strong></p>
 <ul>
-<li>GET </li>
+<li>POST </li>
 </ul>
 <p><strong>参数：</strong> </p>
 <table>
@@ -287,13 +287,13 @@ Socket.close()  关闭连接</code></pre></table>
 </tr>
 </tbody>
 </table>
-<p><strong>无返回</strong></p></div><h2>2.7、获取登录用户的聊天列表</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<p><strong>无返回</strong></p></div><h2>2.7、查询与当前用户聊天的总用户数（弃用）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
-<li>获取当前登录用的聊天列表，即该用户与哪些用户有过聊天动作。</li>
+<li>查询与当前用户聊天的用户总用户数量，方便分页计算分页使用。</li>
 </ul>
 <p><strong>请求URL：</strong> </p>
 <ul>
-<li><code>http://IP:端口/chat/getChatUserList?userId=用户Id</code></li>
+<li><code>http://IP:端口/chat/getChatUserCount</code></li>
 </ul>
 <p><strong>请求方式：</strong></p>
 <ul>
@@ -317,7 +317,206 @@ Socket.close()  关闭连接</code></pre></table>
 </tr>
 </tbody>
 </table>
-<p><strong>无返回</strong></p></div><h2>2.8、定时任务（离线消息推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<p><strong>无返回</strong></p></div><h2>2.8、获取登录用户的聊天列表（全量）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取当前登录用的聊天列表，即该用户与哪些用户有过聊天动作。</li>
+<li>此功能在数据量小的时候可以使用，否则不建议是使用。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getChatUserList</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回</strong></p>
+<ul>
+<li>返回当前用户聊天用户的列表信息（User实体类对象）</li>
+</ul></div><h2>2.9、获取登录用户的聊天列表（分页）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>分页查询获取当前登录用的聊天列表，即该用户与哪些用户有过聊天动作。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getChatUserListByPage</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageNum</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageSize</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>分页大小</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回</strong></p>
+<ul>
+<li>返回当前用户聊天用户的列表信息（User实体类对象）</li>
+<li>返回结果实例：
+{
+"resCode": 0,
+"resObject": [{
+"activated": 0,
+"age": 1,
+"birthDate": 1574640000000,
+"careerSeq": 0,
+"city": "1",
+"constellation": "1",
+"deleted": 1,
+"educationSeq": 0,
+"email": "",
+"gender": 3,
+"homeTown": "1",
+"hxPassword": "",
+"hxUserName": "1",
+"integral": 0,
+"isApprove": 0,
+"isTeacher": 1,
+"jmPassword": "",
+"jmUserName": "1",
+"job": "1",
+"latitude": 0.0,
+"laugitude": 0.0,
+"level": "1",
+"loginStatus": 2,
+"maritaStatus": 3,
+"mobile": "",
+"nickName": "1",
+"password": "",
+"personalProfile": "1",
+"politcs": "",
+"realName": "1",
+"religions": "",
+"signature": "1",
+"snsName": "1",
+"updatedDate": 1574717067000,
+"userIcon": "1",
+"userId": 3,
+"userName": "1"
+}, {
+"activated": 0,
+"age": 1,
+"birthDate": 1574640000000,
+"careerSeq": 0,
+"city": "1",
+"constellation": "1",
+"deleted": 1,
+"educationSeq": 0,
+"email": "",
+"gender": 3,
+"homeTown": "1",
+"hxPassword": "",
+"hxUserName": "1",
+"integral": 0,
+"isApprove": 0,
+"isTeacher": 1,
+"jmPassword": "",
+"jmUserName": "1",
+"job": "1",
+"latitude": 0.0,
+"laugitude": 0.0,
+"level": "1",
+"loginStatus": 2,
+"maritaStatus": 3,
+"mobile": "",
+"nickName": "1",
+"password": "",
+"personalProfile": "1",
+"politcs": "",
+"realName": "1",
+"religions": "",
+"signature": "1",
+"snsName": "1",
+"updatedDate": 1574717067000,
+"userIcon": "1",
+"userId": 4,
+"userName": "1"
+}, {
+"activated": 0,
+"age": 1,
+"birthDate": 1574640000000,
+"careerSeq": 0,
+"city": "1",
+"constellation": "1",
+"deleted": 1,
+"educationSeq": 0,
+"email": "",
+"gender": 3,
+"homeTown": "1",
+"hxPassword": "",
+"hxUserName": "1",
+"integral": 0,
+"isApprove": 0,
+"isTeacher": 1,
+"jmPassword": "",
+"jmUserName": "1",
+"job": "1",
+"latitude": 0.0,
+"laugitude": 0.0,
+"level": "1",
+"loginStatus": 2,
+"maritaStatus": 3,
+"mobile": "",
+"nickName": "1",
+"password": "",
+"personalProfile": "1",
+"politcs": "",
+"realName": "1",
+"religions": "",
+"signature": "1",
+"snsName": "1",
+"updatedDate": 1574717067000,
+"userIcon": "1",
+"userId": 5,
+"userName": "1"
+}],
+"totalCnt": 6
+}</li>
+</ul></div><h2>2.10、定时任务（离线消息推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
 <li>离线消息推送，在用户再次登录链接Websocket后，进行离线消息定时推送，当前频率是每5秒轮询一次</li>
 </ul>
@@ -328,7 +527,7 @@ Socket.close()  关闭连接</code></pre></table>
 <p><strong>实现代码位置</strong>
 com\superbar\chat\websocket\handler\SuperBarChatHandler.java中sendOfflineMsg方法</p>
 </li>
-</ul></div><h2>2.9、定时任务（通知公告推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+</ul></div><h2>2.11、定时任务（通知公告推送）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
 <li>通知公告推送，轮训当前已经登录的Websocket用户，进行用户的通知公告定时推送，当前频率是每5秒</li>
 </ul>
@@ -340,7 +539,156 @@ com\superbar\chat\websocket\handler\SuperBarChatHandler.java中sendOfflineMsg方
 com\superbar\chat\scheduler\AdvicePushScheduler.java中pushAdvicesTask方法</p>
 </li>
 <li>更多返回错误代码请看首页的错误代码描述</li>
-</ul></div><h2>2.10、消息列表获取（全量）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+</ul></div><h2>2.12、消息列表总条数查询（弃用）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>查询用户与聊天用户的消息总记录数，方便进行分页计算使用。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getMsgCount</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">chatUserId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>消息接收用户Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回</strong></p>
+<ul>
+<li>以数组方式返回聊天记录。</li>
+</ul></div><h2>2.13、消息列表获取（分页）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>查询用户与聊天用户的消息列表，按照页码和页容量查询返回，按照发送时间升序排列。</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://IP:端口/chat/getMsgByPage</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">chatUserId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>消息接收用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageNum</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageSize</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>页容量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+pageNo（页码）参数必须从1开始。
+pageSize（页容量）参数必须大于1.</p>
+<p><strong>返回</strong></p>
+<ul>
+<li>以数组方式返回聊天记录。</li>
+<li>返回结果实例：
+{
+"resCode": 0,
+"resObject": [{
+"cTimeStamp": 1576331892000,
+"contentType": "1",
+"fromUserId": 1,
+"lastUTimeStamp": 1576332140000,
+"msgId": 6,
+"msgType": "chatoto",
+"status": "3",
+"textmsg": "111111111",
+"toUserId": 2
+}, {
+"cTimeStamp": 1576332140000,
+"contentType": "1",
+"fromUserId": 2,
+"lastUTimeStamp": 1576336464000,
+"msgId": 12,
+"msgType": "chatoto",
+"status": "3",
+"textmsg": "1111111111",
+"toUserId": 1
+}, {
+"cTimeStamp": 1576340095000,
+"contentType": "1",
+"fromUserId": 1,
+"lastUTimeStamp": 1576340101000,
+"msgId": 23,
+"msgType": "chatoto",
+"status": "2",
+"textmsg": "111111111111111",
+"toUserId": 2
+}, {
+"cTimeStamp": 1576343131000,
+"contentType": "1",
+"fromUserId": 1,
+"lastUTimeStamp": 1576422535000,
+"msgId": 24,
+"msgType": "chatoto",
+"status": "3",
+"textmsg": "来自用户1",
+"toUserId": 2
+}, {
+"cTimeStamp": 1576422578000,
+"contentType": "1",
+"fromUserId": 1,
+"lastUTimeStamp": 1576422578000,
+"msgId": 25,
+"msgType": "chatoto",
+"status": "2",
+"textmsg": "12121212122",
+"toUserId": 2
+}],
+"totalCnt": 11
+}</li>
+</ul></div><h2>2.14、消息列表获取（全量）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
 <ul>
 <li>查询用户与聊天用户的消息列表，所有消息列表，按照发送时间升序排列。</li>
 </ul>
@@ -376,60 +724,6 @@ com\superbar\chat\scheduler\AdvicePushScheduler.java中pushAdvicesTask方法</p>
 </tr>
 </tbody>
 </table>
-<p><strong>返回</strong></p>
-<ul>
-<li>以数组方式返回聊天记录。</li>
-</ul></div><h2>2.11、消息列表获取（分页）</h2><div style="margin-left:0px;"><p><strong>简要描述：</strong> </p>
-<ul>
-<li>查询用户与聊天用户的消息列表，按照页码和页容量查询返回，按照发送时间升序排列。</li>
-</ul>
-<p><strong>请求URL：</strong> </p>
-<ul>
-<li><code>http://IP:端口/chat/getMsgByPage</code></li>
-</ul>
-<p><strong>请求方式：</strong></p>
-<ul>
-<li>GET </li>
-</ul>
-<p><strong>参数：</strong> </p>
-<table>
-<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
-<th style="text-align: left;">参数名</th>
-<th style="text-align: left;">必选</th>
-<th style="text-align: left;">类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">userId</td>
-<td style="text-align: left;">是</td>
-<td style="text-align: left;">string</td>
-<td>登录用户Id</td>
-</tr>
-<tr>
-<td style="text-align: left;">chatUserId</td>
-<td style="text-align: left;">是</td>
-<td style="text-align: left;">string</td>
-<td>消息接收用户Id</td>
-</tr>
-<tr>
-<td style="text-align: left;">pageNo</td>
-<td style="text-align: left;">是</td>
-<td style="text-align: left;">string</td>
-<td>页码</td>
-</tr>
-<tr>
-<td style="text-align: left;">pageSize</td>
-<td style="text-align: left;">是</td>
-<td style="text-align: left;">string</td>
-<td>页容量</td>
-</tr>
-</tbody>
-</table>
-<p><strong>备注</strong>
-pageNo（页码）参数必须从1开始。
-pageSize（页容量）参数必须大于1.</p>
 <p><strong>返回</strong></p>
 <ul>
 <li>以数组方式返回聊天记录。</li>
