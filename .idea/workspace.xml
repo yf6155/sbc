@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d47c86f-dc85-44c6-a6ec-68b741a8563e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="400" column="9" selection-start-line="400" selection-start-column="9" selection-end-line="400" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="411" column="28" selection-start-line="411" selection-start-column="28" selection-end-line="411" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#1;n#html#0;n#!!top" expanded="true" />
@@ -44,20 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+            <state relative-caret-position="101">
+              <caret line="132" column="51" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/MessageProvider.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="57" />
+            <state relative-caret-position="227">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,70 +67,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+            <state relative-caret-position="120">
+              <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="140" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+            <state relative-caret-position="456">
+              <caret line="50" column="7" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1511#1512#0" expanded="true" />
-                <element signature="e#1538#1539#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/MessageDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="135" column="3" lean-forward="true" selection-start-line="135" selection-start-column="3" selection-end-line="143" selection-end-column="7" />
-              <folding>
-                <element signature="e#4381#4396#0" expanded="true" />
-                <element signature="e#5173#5188#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="80" column="50" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -206,8 +155,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/Advice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceStatusProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/AdviceDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/handler/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error.html" />
@@ -230,16 +177,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/MessageDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/handler/SuperBarChatHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IMessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/chat.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/chat.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java" />
       </list>
     </option>
   </component>
@@ -388,6 +337,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -517,7 +475,7 @@
       <workItem from="1575086048329" duration="13065000" />
       <workItem from="1575101953116" duration="628000" />
       <workItem from="1576289280696" duration="16268000" />
-      <workItem from="1576372627570" duration="2260000" />
+      <workItem from="1576372627570" duration="7494000" />
     </task>
     <task id="LOCAL-00001" summary="20191214 add by HandsGoing for t_user table ddl">
       <created>1576297108851</created>
@@ -561,11 +519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1576374133224</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20191215 add by HandsGoing for 优化消息查询">
+      <created>1576375074934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576375074934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166688000" />
+    <option name="totallyTimeSpent" value="171922000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -580,7 +545,7 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23853868" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23853868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -592,7 +557,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.33200532" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32839838" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" weight="0.36742935" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" visible="true" weight="0.36742935" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32891247" />
@@ -615,7 +580,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295129" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23853868" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23853868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -627,7 +592,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.33200532" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32839838" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" visible="true" weight="0.36742935" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" visible="true" weight="0.36742935" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32891247" />
@@ -670,28 +635,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="20191215 add by HandsGoing for 优化消息查询" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="message" />
@@ -1012,32 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding>
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1073,16 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IMessageMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
@@ -1100,50 +1007,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="400" column="9" selection-start-line="400" selection-start-column="9" selection-end-line="400" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#3;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#4;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#5;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#6;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IMessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1156,20 +1023,6 @@
           <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1511#1512#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1192,26 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="39" column="80" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="80" column="50" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/MessageProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -1224,8 +1057,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        <state relative-caret-position="194">
+          <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2129#2130#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="411" column="28" selection-start-line="411" selection-start-column="28" selection-end-line="411" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#3;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#4;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#5;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#6;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="132" column="51" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="51" />
         </state>
       </provider>
     </entry>
