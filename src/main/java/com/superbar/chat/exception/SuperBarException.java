@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @Date : 2019/11/24
  * @Version : v1.0
  */
-public class SuperBarException extends DataBaseException {
+public class SuperBarException extends RuntimeException  {
 
     public SuperBarException() {
         super();

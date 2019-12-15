@@ -87,7 +87,7 @@ public class UserDao implements IDao<User> {
             pageNo = 0;
         }
         try {
-            result = iUserMapper.queryChatUserList(userId);
+            result = iUserMapper.queryChatUserListByPage(userId, pageNo, pageSize);
         } catch (Exception e) {
             log.error("The UserDao execute queryChatUserListByPage method happends exception.", e);
             result = new ArrayList<User>();

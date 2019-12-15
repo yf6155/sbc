@@ -44,9 +44,26 @@ public class UserServiceImpl implements IUserService {
         return chatUserList;
     }
 
+    /**
+     * 分页查询聊天用户列表
+     *
+     * @param userId
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
     @Override
     public ArrayList<User> queryChatUserListByPage(Integer userId, Integer pageNo, Integer pageSize) {
-        return null;
+        ArrayList<User> chatUserList = new ArrayList<User>();
+
+        try {
+            chatUserList = userDao.queryChatUserListByPage(userId, pageNo, pageSize);
+        } catch (Exception e) {
+            log.error("execute queryChatUserList happends exception,the userId is " + userId);
+            throw new SuperBarException("GetChatUserList happends exception,the userId is " + userId, null);
+        }
+
+        return chatUserList;
     }
 
     @Override

@@ -10,7 +10,7 @@ package com.superbar.chat.exception;
  * @Date : 2019/11/29
  * @Version : v1.0
  */
-public class DataBaseException extends RuntimeException {
+public class DataBaseException extends SuperBarException {
 
     public DataBaseException() {
         super();
