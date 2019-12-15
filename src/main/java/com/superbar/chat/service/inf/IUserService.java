@@ -8,5 +8,7 @@ public interface IUserService {
 
     public ArrayList<User> queryChatUserList(Integer userId);
 
+    public ArrayList<User> queryChatUserListByPage(Integer userId, Integer pageNo, Integer pageSize);
+
     public Integer queryChatUserCount(Integer userId);
 }

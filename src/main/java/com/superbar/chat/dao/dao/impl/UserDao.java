@@ -69,4 +69,30 @@ public class UserDao implements IDao<User> {
         }
         return result;
     }
+
+    /**
+     * 翻页查询
+     *
+     * @param userId
+     * @param pageNo   页码（从1开始）
+     * @param pageSize 分页容量
+     * @return
+     */
+    public ArrayList<User> queryChatUserListByPage(Integer userId, Integer pageNo, Integer pageSize) {
+        ArrayList<User> result = new ArrayList<User>();
+        Integer offset = 0;
+        if (pageNo >= 1) {
+            pageNo = pageNo - 1;
+        } else {
+            pageNo = 0;
+        }
+        try {
+            result = iUserMapper.queryChatUserList(userId);
+        } catch (Exception e) {
+            log.error("The UserDao execute queryChatUserListByPage method happends exception.", e);
+            result = new ArrayList<User>();
+            throw new DataBaseException("The UserDao execute queryChatUserListByPage method happends exception.", e);
+        }
+        return result;
+    }
 }

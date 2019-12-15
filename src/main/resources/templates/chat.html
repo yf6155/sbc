@@ -73,9 +73,13 @@
         <td align="left">
             <button onclick="getChatUserCount()">查询</button>
         </td>
-        <td align="right" width="15%">查询</td>
+        <td align="right" width="15%">全量查询</td>
         <td align="left">
             <button onclick="getChatUserList()">查询</button>
+        </td>
+        <td align="right" width="15%">分页查询</td>
+        <td align="left">
+            <button onclick="getChatUserListByPage()">查询</button>
         </td>
     </tr>
 </table>
@@ -375,6 +379,28 @@
      * 获取聊天用户列表
      */
     function getChatUserList() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getChatUserList',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("列表长度：" + e.resObject.length)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+    /**
+     * 分页获取聊天用户列表
+     */
+    function getChatUserListByPage() {
         $.ajax({
             url: 'http://localhost:8080/chat/getChatUserList',
             dataType: "json",

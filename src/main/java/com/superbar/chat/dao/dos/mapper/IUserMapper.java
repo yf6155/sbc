@@ -31,4 +31,14 @@ public interface IUserMapper {
     @ResultType(User.class)
     public ArrayList<User> queryChatUserList(Integer userId);
 
+    /**
+     * 分页查询当前用户的聊天用户列表
+     *
+     * @param userId
+     * @return
+     */
+    @SelectProvider(type = UserProvider.class, method = "queryChatUserListByPage")
+    @ResultType(User.class)
+    public ArrayList<User> queryChatUserListByPage(Integer userId, Integer offset, Integer pageSize);
+
 }

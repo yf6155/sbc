@@ -45,6 +45,11 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public ArrayList<User> queryChatUserListByPage(Integer userId, Integer pageNo, Integer pageSize) {
+        return null;
+    }
+
+    @Override
     public Integer queryChatUserCount(Integer userId) {
         return queryChatUserList(userId).size();
     }
