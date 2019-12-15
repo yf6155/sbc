@@ -69,6 +69,7 @@
 <h4>获取当前用户的所有聊天用户列表</h4>
 <table style="width: 98%" border="1">
     <tr>
+        <!--
         <td align="right" width="15%">总条数查询</td>
         <td align="left">
             <button onclick="getChatUserCount()">查询</button>
@@ -77,6 +78,7 @@
         <td align="left">
             <button onclick="getChatUserList()">查询</button>
         </td>
+        -->
         <td align="right" width="15%">分页查询</td>
         <td align="left">
             <button onclick="getChatUserListByPage()">查询</button>
@@ -87,6 +89,7 @@
 <h4>查询聊天记录</h4>
 <table style="width: 98%" border="1">
     <tr>
+        <!--
         <td align="right" width="15%">总条数查询</td>
         <td align="left">
             <button onclick="getMsgCount()">查询</button>
@@ -95,6 +98,7 @@
         <td align="left">
             <button onclick="getMsg()">查询</button>
         </td>
+        -->
         <td align="right" width="15%">分页查询</td>
         <td align="left">
             <button onclick="getMsgByPage()">查询</button>
@@ -408,12 +412,12 @@
             type: "get",
             data: {
                 userId: userId,
-                pageNo: "2",
+                pageNum: "2",
                 pageSize: "3"
             },
             success: function (e) {
                 if (e.resCode == 0) {
-                    alert("列表长度：" + e.resObject.length)
+                    alert("总条数：" + e.totalCnt + "，本次查询用户列表长度：" + e.resObject.length)
                 } else {
                     alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
                 }
@@ -479,12 +483,12 @@
             data: {
                 userId: userId,
                 chatUserId: "2",
-                pageNo: "2",
+                pageNum: "2",
                 pageSize: "5"
             },
             success: function (e) {
                 if (e.resCode == 0) {
-                    alert("列表长度：" + e.resObject.length)
+                    alert("总条数：" + e.totalCnt + "，本次查询消息列表长度：" + e.resObject.length)
                 } else {
                     alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
                 }

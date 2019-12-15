@@ -1,6 +1,8 @@
 package com.superbar.chat.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.superbar.chat.controller.eny.ControllerResponse;
+import com.superbar.chat.controller.eny.QueryResultResponse;
 import com.superbar.chat.dao.entity.User;
 import com.superbar.chat.exception.SuperBarException;
 import com.superbar.chat.service.inf.IAdviceService;
@@ -128,42 +130,58 @@ public class UserController {
      * 通过用户id查询与该用户聊天的所有用户列表（包括异常状态的用户）
      *
      * @param userId
+     * @param pageNum
+     * @param pageSize
      * @return
      */
     @RequestMapping(value = "/getChatUserListByPage", method = RequestMethod.GET)
     @ResponseBody
-    public ControllerResponse getChatUserListByPage(String userId, String pageNo, String pageSize) {
-        ControllerResponse controllerResponse = new ControllerResponse();
+    public QueryResultResponse getChatUserListByPage(String userId, String pageNum, String pageSize) {
+        QueryResultResponse queryResultResponse = new QueryResultResponse();
         int resCode = 0;
 
         if (StringUtils.isEmpty(userId)) {
             resCode = 2;
-            controllerResponse.setResCode(resCode);
-            controllerResponse.setResMessage("请求用户Id为空，请检查！");
-            return controllerResponse;
+            queryResultResponse.setResCode(resCode);
+            queryResultResponse.setResMessage("请求用户Id为空，请检查！");
+            return queryResultResponse;
         }
 
-        if (StringUtils.isEmpty(pageNo) || StringUtils.isEmpty(pageSize)) {
+        if (StringUtils.isEmpty(pageNum) || StringUtils.isEmpty(pageSize)) {
             resCode = 2;
-            controllerResponse.setResCode(resCode);
-            controllerResponse.setResMessage("分页为空，请检查！");
-            return controllerResponse;
+            queryResultResponse.setResCode(resCode);
+            queryResultResponse.setResMessage("分页为空，请检查！");
+            return queryResultResponse;
         }
 
+        //查询获取总条数
+        Integer count = 0;
+        try {
+            count = iUserService.queryChatUserCount(Integer.valueOf(userId));
+            queryResultResponse.setTotalCnt(count);
+        } catch (SuperBarException e) {
+            resCode = 2;
+            queryResultResponse.setResCode(resCode);
+            queryResultResponse.setResMessage("查询聊天用户数量异常，异常信息为：" + e.getMessage());
+            return queryResultResponse;
+        }
+
+        //查询获取消息列表
         ArrayList<User> userList;
 
         try {
-            userList = iUserService.queryChatUserListByPage(Integer.valueOf(userId), Integer.valueOf(pageNo), Integer.valueOf(pageSize));
+            userList = iUserService.queryChatUserListByPage(Integer.valueOf(userId), Integer.valueOf(pageNum), Integer.valueOf(pageSize));
         } catch (SuperBarException e) {
             resCode = 2;
-            controllerResponse.setResCode(resCode);
-            controllerResponse.setResMessage("查询用户列表异常，异常信息为：" + e.getMessage());
-            return controllerResponse;
+            queryResultResponse.setResCode(resCode);
+            queryResultResponse.setResMessage("查询用户列表异常，异常信息为：" + e.getMessage());
+            return queryResultResponse;
         }
 
-        controllerResponse.setResCode(resCode);
-        controllerResponse.setResObject(userList);
-        return controllerResponse;
+        queryResultResponse.setResCode(resCode);
+        queryResultResponse.setResObject(userList);
+        log.info(JSON.toJSONString(queryResultResponse));
+        return queryResultResponse;
     }
 
 }

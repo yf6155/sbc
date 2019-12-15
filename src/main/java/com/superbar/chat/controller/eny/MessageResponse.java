@@ -3,7 +3,7 @@ package com.superbar.chat.controller.eny;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * 服务端响应
+ * 聊天、公告通知消息服务端响应类
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MessageResponse {
