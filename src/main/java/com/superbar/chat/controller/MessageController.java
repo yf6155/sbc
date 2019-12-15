@@ -46,6 +46,42 @@ public class MessageController {
      * @param chatUserId 登录用户聊天用户
      * @return
      */
+    @RequestMapping(value = "/getMsgCount", method = RequestMethod.GET)
+    @ResponseBody
+    public ControllerResponse getMsgCount(String userId, String chatUserId) {
+        ControllerResponse controllerResponse = new ControllerResponse();
+        int resCode = 0;
+
+        if (StringUtils.isEmpty(userId) || StringUtils.isEmpty(chatUserId)) {
+            resCode = 2;
+            controllerResponse.setResCode(resCode);
+            controllerResponse.setResMessage("用户Id为空，请检查！");
+            return controllerResponse;
+        }
+
+        Integer count = 0;
+
+        try {
+            count = iMessageService.selectChatMsgCount(Integer.valueOf(userId), Integer.valueOf(chatUserId));
+        } catch (SuperBarException e) {
+            resCode = 2;
+            controllerResponse.setResCode(resCode);
+            controllerResponse.setResMessage("查询消息列表记录数异常，异常信息为：" + e.getMessage());
+            return controllerResponse;
+        }
+
+        controllerResponse.setResCode(resCode);
+        controllerResponse.setResObject(count);
+        return controllerResponse;
+    }
+
+    /**
+     * 全量聊天记录查询
+     *
+     * @param userId     登录用户
+     * @param chatUserId 登录用户聊天用户
+     * @return
+     */
     @RequestMapping(value = "/getMsg", method = RequestMethod.GET)
     @ResponseBody
     public ControllerResponse getMsg(String userId, String chatUserId) {

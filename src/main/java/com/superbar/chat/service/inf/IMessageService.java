@@ -17,6 +17,15 @@ import java.util.ArrayList;
 public interface IMessageService {
 
     /**
+     * 全量聊天记录条数查询
+     *
+     * @param userId     登录用户
+     * @param chatUserId 登录用户聊天用户
+     * @return
+     */
+    public Integer selectChatMsgCount(Integer userId, Integer chatUserId);
+
+    /**
      * 全量聊天记录查询
      *
      * @param userId     登录用户

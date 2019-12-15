@@ -69,15 +69,24 @@
 <h4>获取当前用户的所有聊天用户列表</h4>
 <table style="width: 98%" border="1">
     <tr>
+        <td align="right" width="15%">总条数查询</td>
+        <td align="left">
+            <button onclick="getChatUserCount()">查询</button>
+        </td>
         <td align="right" width="15%">查询</td>
         <td align="left">
             <button onclick="getChatUserList()">查询</button>
         </td>
     </tr>
 </table>
+
 <h4>查询聊天记录</h4>
 <table style="width: 98%" border="1">
     <tr>
+        <td align="right" width="15%">总条数查询</td>
+        <td align="left">
+            <button onclick="getMsgCount()">查询</button>
+        </td>
         <td align="right" width="15%">全量查询</td>
         <td align="left">
             <button onclick="getMsg()">查询</button>
@@ -341,6 +350,28 @@
     }
 
     /**
+     * 获取聊天用户列表条数
+     */
+    function getChatUserCount() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getChatUserCount',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("列表总条数：" + e.resObject)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+    /**
      * 获取聊天用户列表
      */
     function getChatUserList() {
@@ -355,6 +386,29 @@
             success: function (e) {
                 if (e.resCode == 0) {
                     alert("列表长度：" + e.resObject.length)
+                } else {
+                    alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
+                }
+            }
+        });
+    }
+
+    /**
+     * 消息记录条数
+     */
+    function getMsgCount() {
+        $.ajax({
+            url: 'http://localhost:8080/chat/getMsgCount',
+            dataType: "json",
+            contentType: "application/json",
+            type: "get",
+            data: {
+                userId: userId,
+                chatUserId: "2"
+            },
+            success: function (e) {
+                if (e.resCode == 0) {
+                    alert("消息总条数：" + e.resObject)
                 } else {
                     alert("返回码：" + e.resCode + " , The resMessage is " + e.resMessage);
                 }

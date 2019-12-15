@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface IUserService {
 
     public ArrayList<User> queryChatUserList(Integer userId);
+
+    public Integer queryChatUserCount(Integer userId);
 }

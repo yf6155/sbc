@@ -31,6 +31,18 @@ public class MessageServiceImpl implements IMessageService {
     private MessageDao messageDao;
 
     /**
+     * 全量聊天记录条数查询
+     *
+     * @param userId     登录用户
+     * @param chatUserId 登录用户聊天用户
+     * @return
+     */
+    @Override
+    public Integer selectChatMsgCount(Integer userId, Integer chatUserId) {
+        return selectChatMsgList(userId, chatUserId).size();
+    }
+
+    /**
      * 全量聊天记录查询
      *
      * @param userId     登录用户

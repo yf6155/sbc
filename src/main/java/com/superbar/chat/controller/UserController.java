@@ -56,6 +56,40 @@ public class UserController {
     }
 
     /**
+     * 通过用户id查询与该用户聊天的所有用户记录数（包括异常状态的用户）
+     *
+     * @param userId
+     * @return
+     */
+    @RequestMapping(value = "/getChatUserCount", method = RequestMethod.GET)
+    @ResponseBody
+    public ControllerResponse getChatUserCount(String userId) {
+        ControllerResponse controllerResponse = new ControllerResponse();
+        int resCode = 0;
+
+        if (StringUtils.isEmpty(userId)) {
+            resCode = 2;
+            controllerResponse.setResCode(resCode);
+            controllerResponse.setResMessage("请求用户Id为空，请检查！");
+            return controllerResponse;
+        }
+
+        Integer count = 0;
+        try {
+            count = iUserService.queryChatUserCount(Integer.valueOf(userId));
+        } catch (SuperBarException e) {
+            resCode = 2;
+            controllerResponse.setResCode(resCode);
+            controllerResponse.setResMessage("查询聊天用户数量异常，异常信息为：" + e.getMessage());
+            return controllerResponse;
+        }
+
+        controllerResponse.setResCode(resCode);
+        controllerResponse.setResObject(count);
+        return controllerResponse;
+    }
+
+    /**
      * 通过用户id查询与该用户聊天的所有用户列表（包括异常状态的用户）
      *
      * @param userId

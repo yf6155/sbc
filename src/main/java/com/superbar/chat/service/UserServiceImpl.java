@@ -43,4 +43,9 @@ public class UserServiceImpl implements IUserService {
 
         return chatUserList;
     }
+
+    @Override
+    public Integer queryChatUserCount(Integer userId) {
+        return queryChatUserList(userId).size();
+    }
 }
