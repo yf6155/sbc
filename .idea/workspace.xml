@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.41199377" />
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5d47c86f-dc85-44c6-a6ec-68b741a8563e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/QueryResultResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/enums/MessageTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/enums/MessageTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/handler/SuperBarChatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/handler/SuperBarChatHandler.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,49 +23,6 @@
   <component name="FavoritesManager">
     <favorites_list name="sbc" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="419" column="56" selection-start-line="419" selection-start-column="56" selection-end-line="419" selection-end-column="56" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#3;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#4;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#5;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#6;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
-              <folding>
-                <element signature="e#4985#5000#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -75,101 +32,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>spring-boot-starte</find>
-      <find>7090</find>
-      <find>d</find>
-      <find>attributes.pu</find>
-      <find>add_user</find>
-      <find>save-username</find>
-      <find>add-username</find>
-      <find>fav</find>
-      <find>fa</find>
-      <find>singlechat</find>
-      <find>close</find>
-      <find>private</find>
-      <find>updateMessageEntitySendInfoByKey</find>
-      <find>image</find>
-      <find>wssConcurrentHashMap</find>
-      <find>AdviceProvider</find>
-      <find>spring-boot-starter-websocket</find>
-      <find>after</find>
-      <find>handleTextMessage</find>
-      <find>MessageResponse</find>
-      <find>groupchat</find>
-      <find>con</find>
-      <find>getchat</find>
-      <find>get</find>
-      <find>getcha</find>
-      <find>`</find>
-      <find>userId</find>
-      <find>.get(&quot;userId&quot;)</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>public</replace>
-      <replace>AdviceStatusProvider</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/MessageEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/ChatResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/AdviceStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/config/dto/DataTransferObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/IAdviceStatusProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceStatusMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/ControllerResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/config/handler/SuperBarChatHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/config/dto/AdviceDataTransferObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/config/exception/SuperBarException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/utils/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/Advice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceStatusProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/AdviceDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/handler/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/error.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IAdviceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/beanconfig/SuperBarBeansConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/AdviceSendInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceSendInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/AdviceStatusDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/scheduler/AdvicePushScheduler.java" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceSendInfoProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/AdviceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IMessageMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/MessageProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/MessageDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/handler/SuperBarChatHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IMessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/MessageResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/QueryResultResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/chat.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java" />
-      </list>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -178,111 +42,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="superbar-chat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="superbar-chat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1452" />
-    <option name="height" value="876" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="eny" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1YpQSCOFV4WC0alcjynA6fFt2Te" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -296,13 +60,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/个人项目/dupeng/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/doc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -326,18 +90,6 @@
       <recent name="D:\Program Files\sbc" />
       <recent name="D:\Program Files\sbc\src\main\resources\config" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SuperbarChatApplication">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -365,6 +117,9 @@
         <item itemvalue="Application.Demo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -394,7 +149,14 @@
       <workItem from="1575101953116" duration="628000" />
       <workItem from="1576289280696" duration="16268000" />
       <workItem from="1576372627570" duration="7826000" />
-      <workItem from="1576398580584" duration="2418000" />
+      <workItem from="1576398580584" duration="3170000" />
+      <workItem from="1577519088761" duration="550000" />
+      <workItem from="1583582411646" duration="1005000" />
+      <workItem from="1583584212258" duration="1344000" />
+      <workItem from="1583589219123" duration="786000" />
+      <workItem from="1583635862965" duration="495000" />
+      <workItem from="1583637166483" duration="962000" />
+      <workItem from="1583638423676" duration="1112000" />
     </task>
     <task id="LOCAL-00001" summary="20191214 add by HandsGoing for t_user table ddl">
       <created>1576297108851</created>
@@ -459,11 +221,22 @@
       <option name="project" value="LOCAL" />
       <updated>1576394549861</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="20191215 add by HandsGoing for query result class redefine">
+      <created>1576401162482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576401162482</updated>
+    </task>
+    <task id="LOCAL-00011" summary="20191215 add by HandsGoing for query result class redefine">
+      <created>1576401288436</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576401288436</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174672000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -473,80 +246,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1452" height="876" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2420977" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32891247" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.33200532" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32839838" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" visible="true" weight="0.36742935" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32891247" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.32891247" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891247" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007163" side_tool="true" weight="0.39920425" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32802126" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32934928" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.36494252" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295129" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2420977" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32891247" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.33200532" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32839838" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49928367" weight="0.36742935" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32891247" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.32891247" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891247" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007163" side_tool="true" weight="0.39920425" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32802126" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32934928" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.36494252" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295129" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -565,7 +264,66 @@
     <MESSAGE value="20191214 add by HandsGoing for t_user table ddl" />
     <MESSAGE value="20191214 add by HandsGoing for 添加用户列表和消息记录查询功能" />
     <MESSAGE value="20191215 add by HandsGoing for 优化消息查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="20191215 add by HandsGoing for 优化消息查询" />
+    <MESSAGE value="20191215 add by HandsGoing for query result class redefine" />
+    <option name="LAST_COMMIT_MESSAGE" value="20191215 add by HandsGoing for query result class redefine" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1340" height="229" key="GridCell.Tab.0.bottom" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.0.bottom/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.0.center" timestamp="1583639297106">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.0.center/0.0.1440.870@0.0.1440.870" timestamp="1583639297106" />
+    <state width="1340" height="229" key="GridCell.Tab.0.left" timestamp="1583639297106">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.0.left/0.0.1440.870@0.0.1440.870" timestamp="1583639297106" />
+    <state width="1340" height="229" key="GridCell.Tab.0.right" timestamp="1583639297106">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.0.right/0.0.1440.870@0.0.1440.870" timestamp="1583639297106" />
+    <state width="1340" height="229" key="GridCell.Tab.1.bottom" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.1.bottom/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.1.center" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.1.center/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.1.left" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.1.left/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.1.right" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.1.right/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.2.bottom" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.2.bottom/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.2.center" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.2.center/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.2.left" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.2.left/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state width="1340" height="229" key="GridCell.Tab.2.right" timestamp="1583639297107">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state width="1340" height="229" key="GridCell.Tab.2.right/0.0.1440.870@0.0.1440.870" timestamp="1583639297107" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1583638636674">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1440.870@0.0.1440.870" timestamp="1583638636674" />
+    <state x="383" y="191" width="672" height="678" key="search.everywhere.popup" timestamp="1583638657065">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="383" y="191" width="672" height="678" key="search.everywhere.popup/0.0.1440.870@0.0.1440.870" timestamp="1583638657065" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -612,548 +370,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/AdviceStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/beanconfig/SuperBarBeansConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/utils/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/AdviceSendInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
-          <folding>
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/SuperbarChatApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.1.RELEASE/spring-boot-2.2.1.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.1.RELEASE/spring-context-5.2.1.RELEASE.jar!/org/springframework/scheduling/annotation/Scheduled.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceStatusProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceStatusMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IAdviceSendInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/AdviceStatusDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="94" column="53" lean-forward="true" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3340#3356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1127">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/dto/AdviceDataTransferObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/scheduler/AdvicePushScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="28" selection-end-line="7" selection-end-column="88" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HELP.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.1.RELEASE/spring-boot-2.2.1.RELEASE.jar!/org/springframework/boot/logging/LogLevel.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/db/ddl/t_user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/AdviceSendInfoProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="438" column="57" lean-forward="true" selection-start-line="438" selection-start-column="57" selection-end-line="438" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="560" selection-start-line="560" selection-end-line="560" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="119" column="25" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IAdviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/AdviceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IMessageMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/websocket/handler/SuperBarChatHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/inf/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/IDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/MessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="135" column="3" lean-forward="true" selection-start-line="135" selection-start-column="3" selection-end-line="143" selection-end-column="7" />
-          <folding>
-            <element signature="e#4381#4396#0" expanded="true" />
-            <element signature="e#5173#5188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/MessageProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/provider/UserProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/SuperBarException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/exception/DataBaseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dos/mapper/IUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/dao/dao/impl/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/service/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/MessageResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/ControllerResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/ChatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="67" column="17" lean-forward="true" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/eny/QueryResultResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="419" column="56" selection-start-line="419" selection-start-column="56" selection-end-line="419" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#3;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#4;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#5;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#6;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="e#4985#5000#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/superbar/chat/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>sbc</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

@@ -112,6 +112,10 @@ public class SuperBarChatHandler implements WebSocketHandler {
         //获取传输整体对象
         String dtoStr = (String) bigMsgAppend.get().toString();
 
+        if(bigMsgAppend != null){
+            bigMsgAppend.remove();
+        }
+
         MessageDataTransferObject dto = null;
 
         if (!StringUtils.isEmpty(dtoStr)) {
